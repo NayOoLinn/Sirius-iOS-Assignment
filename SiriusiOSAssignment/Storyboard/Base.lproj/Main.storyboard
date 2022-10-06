@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SearchVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SearchVC" id="BYZ-38-t0r" customClass="SearchVC" customModule="SiriusiOSAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ft6-9Q-ile">
+                                <rect key="frame" x="0.0" y="44" width="414" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="CU6-xf-qDb"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="j1j-yv-c5p">
+                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ft6-9Q-ile" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0Il-R5-cs8"/>
+                            <constraint firstItem="j1j-yv-c5p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FRZ-Df-aWQ"/>
+                            <constraint firstItem="j1j-yv-c5p" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Kcf-uq-u4R"/>
+                            <constraint firstItem="j1j-yv-c5p" firstAttribute="top" secondItem="ft6-9Q-ile" secondAttribute="bottom" id="N8P-po-fAK"/>
+                            <constraint firstItem="ft6-9Q-ile" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="S5H-bW-Jir"/>
+                            <constraint firstItem="j1j-yv-c5p" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Xau-wR-CGy"/>
+                            <constraint firstItem="ft6-9Q-ile" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YLo-Li-hZK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="ft6-9Q-ile" id="x8h-tC-ohI"/>
+                        <outlet property="tblCities" destination="j1j-yv-c5p" id="Gcz-ul-rU8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-16" y="70"/>
+        </scene>
+        <!--City DetailVC-->
+        <scene sceneID="qYB-eS-Zqb">
+            <objects>
+                <viewController storyboardIdentifier="CityDetailVC" id="9Nq-PL-bko" customClass="CityDetailVC" customModule="SiriusiOSAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CdM-K8-PdR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5Ux-x5-E3R">
+                                <rect key="frame" x="20" y="685.5" width="374" height="176.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Sydney, Australia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mca-l6-Abr">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="41°24'12.2&quot;N 2°10'26.5&quot;E" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nj8-mi-fhe">
+                                        <rect key="frame" x="0.0" y="35.5" width="374" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XsU-mr-hUr">
+                                        <rect key="frame" x="0.0" y="68.5" width="374" height="46"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="76U-Jk-Tzb"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="View in Apple Map">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEa-fT-0S2">
+                                        <rect key="frame" x="0.0" y="130.5" width="374" height="46"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="DeT-V4-jm4"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Close">
+                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="16"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Cy3-oa-Nvy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="665.5"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="x2s-0n-k3f"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="x2s-0n-k3f" firstAttribute="trailing" secondItem="5Ux-x5-E3R" secondAttribute="trailing" constant="20" id="3V6-RU-XGr"/>
+                            <constraint firstItem="5Ux-x5-E3R" firstAttribute="leading" secondItem="x2s-0n-k3f" secondAttribute="leading" constant="20" id="5H7-gQ-uqA"/>
+                            <constraint firstItem="Cy3-oa-Nvy" firstAttribute="trailing" secondItem="x2s-0n-k3f" secondAttribute="trailing" id="CDC-DR-QN2"/>
+                            <constraint firstItem="Cy3-oa-Nvy" firstAttribute="top" secondItem="CdM-K8-PdR" secondAttribute="top" id="DGB-ry-WKC"/>
+                            <constraint firstItem="5Ux-x5-E3R" firstAttribute="top" secondItem="Cy3-oa-Nvy" secondAttribute="bottom" constant="20" id="FD2-lV-6hM"/>
+                            <constraint firstItem="Cy3-oa-Nvy" firstAttribute="leading" secondItem="x2s-0n-k3f" secondAttribute="leading" id="int-Ln-Cap"/>
+                            <constraint firstItem="x2s-0n-k3f" firstAttribute="bottom" secondItem="5Ux-x5-E3R" secondAttribute="bottom" id="ruy-6j-va5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnClose" destination="jEa-fT-0S2" id="qlM-W5-fxe"/>
+                        <outlet property="btnMap" destination="XsU-mr-hUr" id="fYP-8b-ekc"/>
+                        <outlet property="lblCityName" destination="mca-l6-Abr" id="w2I-1j-SBJ"/>
+                        <outlet property="lblLocation" destination="nj8-mi-fhe" id="Qsy-7I-NW8"/>
+                        <outlet property="mapView" destination="Cy3-oa-Nvy" id="Lei-cS-r86"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OxJ-1L-L8a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="782.60869565217399" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
